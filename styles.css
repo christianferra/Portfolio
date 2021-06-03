@@ -1,6 +1,6 @@
 *
 {
-    background: #fff;
+    background: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +16,7 @@ section
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
 header
@@ -39,6 +40,22 @@ header .logo
     font-size: 2em;
     text-decoration: none;
     font-weight: 800;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+@keyframes slide_left
+{
+    0%
+    {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 header ul
@@ -62,6 +79,23 @@ header ul li a
     padding: 8px 18px;
     text-decoration: none;
     user-select: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: calc(0.2s *var(--i));
+}
+
+@keyframes slide_top
+{
+    0%
+    {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 header ul li a.active,
@@ -89,12 +123,31 @@ header ul li a:hover
     font-size: 3.5em;
     margin-bottom: 10px;
     font-weight: 700;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: 0.15s;
+}
+@keyframes slide_right
+{
+    0%
+    {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 .contenedor .textBox p
 {
     font-size: 1.2em;
     color: #333;
+    opacity: 0;
+    animation: slide_left 0.5s linear forwards;
+    animation-delay: 0.175s;
 }
 
 .contenedor .textBox a
@@ -109,6 +162,9 @@ header ul li a:hover
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
+    opacity: 0;
+    animation: slide_top 0.5s linear forwards;
+    animation-delay: 0.17s;
 }
 
 .social
@@ -138,6 +194,9 @@ header ul li a:hover
     justify-content: center;
     align-items: center;
     transition: 0.2s ease-in-out;
+    opacity: 0;
+    animation: slide_right 0.5s linear forwards;
+    animation-delay: calc(0.1s * var(--i));
 }
 
 .social li a img
@@ -158,4 +217,19 @@ header ul li a:hover
     bottom: 0;
     right: 0;
     max-width: 700px;
+    opacity: 0;
+    animation: fade_in 1s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade_in 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
