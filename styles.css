@@ -1,6 +1,6 @@
 *
 {
-    background: #eee;
+    background: #fff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -72,19 +72,90 @@ header ul li a:hover
     border-radius: 30px;
 }
 
-.content
+.contenedor
 {
     position: relative;
 }
 
-.content .textBox
+.contenedor .textBox
 {
     position: relative;
     max-width: 550px;
 }
 
-.content .textBox h2
+.contenedor .textBox h2
 {
     color: #0169b2;
-    font-size: 3,5em;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contenedor .textBox p
+{
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contenedor .textBox a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #77afd8;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.social
+{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li
+{
+    list-style: none;
+}
+
+.social li a
+{
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: #77afd8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.social li a img
+{
+    transform: scale(0.8);
+    background: #77afd8;
+}
+
+.social li a:hover
+{
+    background: #77afd8;
+    transform: translateY(-10px);
+} 
+
+.mosque
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 700px;
 }
